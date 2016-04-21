@@ -115,7 +115,7 @@ module Pipedrive
 
       def destroy(id)
         res = delete "#{resource_path}/#{id}"
-        res.ok? ? res : bad_response(res, attrs)
+        res.ok? ? res : bad_response(res, id)
       end
 
       def find_by_name(name, opts={})
